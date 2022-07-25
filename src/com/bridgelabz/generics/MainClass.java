@@ -2,12 +2,11 @@ package com.bridgelabz.generics;
 
 public class MainClass {
     public static void main(String[] args) {
-        MaxString maxString = new MaxString();
-        System.out.println("Test case 1");
-        maxString.maxvalue("Peach","Apple","Banana");
-        System.out.println("Test case 2");
-        maxString.maxvalue("Apple","Zach","Banana");
-        System.out.println("Test case 3");
-        maxString.maxvalue("Apple","Banana","Class");
+        MaxValue<Integer> maxValue = new MaxValue<>(5,4,3);
+        maxValue.testMaximum();
+        MaxValue<Float> maxValue1 = new MaxValue<>(5.2F,8.3F,3.2F);
+        maxValue1.testMaximum();
+        MaxValue<String> maxValue2 = new MaxValue<>("Peach","Apple","Zach");
+        maxValue2.testMaximum();
     }
 }
